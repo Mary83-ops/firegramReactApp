@@ -1,6 +1,6 @@
-import * as firebase from 'firebase/app'
-import 'firebase/storage'
-import 'firebase/firestore'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/storage';
+import 'firebase/compat/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAFsdqNkyPA-0B1e5Wqa21SNt-aDPzIP68",
@@ -12,9 +12,9 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
 
-const projectStorage = firebase.storage();
-const projectFirestore = firebase.firestore();
-
-export {projectStorage, projectFirestore};
+  const projectStorage = firebase.storage();
+  const projectFirestore = firebase.firestore();
+  
+  export { projectStorage, projectFirestore };
